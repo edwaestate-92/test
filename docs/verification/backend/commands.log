@@ -1,0 +1,45 @@
+====================================================================================================
+BACKEND COMMANDS LOG
+Generated: 2026-02-07 17:55 UTC+3
+====================================================================================================
+
+# 1. Install slowapi
+$ pip install slowapi
+→ Successfully installed deprecated-1.3.1 limits-5.8.0 slowapi-0.1.9 wrapt-2.1.1
+
+# 2. Verify app loads with all changes
+$ py -c "import sys; sys.path.insert(0, '.'); from app.main import app; print('App loaded OK, routes:', len([r for r in app.routes]))"
+→ App loaded OK, routes: 91
+
+# 3. Verify FastAPI version
+$ py -c "import fastapi; print(fastapi.__version__)"
+→ 0.109.0
+
+# 4. Verify slowapi installed
+$ py -c "import slowapi; print('ok')"
+→ ok
+
+# 5. Generate OpenAPI schema (verifies all routes register correctly)
+$ py -c "import sys; sys.path.insert(0, '.'); from app.main import app; import json; schema = app.openapi(); print('paths:', len(schema['paths']))"
+→ paths: 75
+
+# 6. Grep: no local _require_moderator definitions remain
+$ grep -r "def _require_moderator" app/transport/routers/
+→ (no results)
+
+# 7. Grep: all router files have get_current_user
+$ grep -rl "get_current_user" app/transport/routers/ | wc -l
+→ 14 (all router files)
+
+# 8. Grep: rate limiting imports present
+$ grep -rl "rate_limit" app/transport/routers/
+→ auth.py, parsing.py, domain_parser.py
+
+# 9. Grep: PathRateLimitMiddleware registered
+$ grep "PathRateLimitMiddleware" app/main.py
+→ from app.utils.rate_limit import limiter, PathRateLimitMiddleware
+→ app.add_middleware(PathRateLimitMiddleware, rules=[("/api/mail/", 10, 60)])
+
+# 10. Grep: unified error format
+$ grep "_build_error_body" app/main.py
+→ 4 occurrences (validation, http, global, starlette handlers)

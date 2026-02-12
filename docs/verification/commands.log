@@ -1,0 +1,103 @@
+npm warn deprecated critters@0.0.24: Ownership of Critters has moved to the Nuxt team, who will be maintaining the project going forward. If you'd like to keep using Critters, please switch to the actively-maintained fork at https://github.com/danielroe/beasties
+
+added 282 packages, and audited 283 packages in 26s
+
+52 packages are looking for funding
+  run `npm fund` for details
+
+1 high severity vulnerability
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+=== NPM CI COMPLETE ===
+=== NPM RUN LINT ===
+
+> moderator-dashboard-ui@1.0.0 lint
+> next lint
+
+тЪа You are using a non-standard "NODE_ENV" value in your environment. This creates inconsistencies in the project and is strongly advised against. Read more: https://nextjs.org/docs/messages/non-standard-node-env
+Invalid project directory provided, no such directory: D:\b2b\frontend\moderator-dashboard-ui\lint
+=== NPM RUN TYPE-CHECK ===
+
+> moderator-dashboard-ui@1.0.0 type-check
+> node ./node_modules/typescript/lib/tsc.js --noEmit
+
+app/actions/parsing.ts(8,24): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/attachments/[id]/route.ts(3,22): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/auth/logout/route.ts(7,13): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/auth/me/route.ts(13,27): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/auth/me/route.ts(30,7): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/auth/status/route.ts(10,29): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/auth/status/route.ts(21,27): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/auth/status/route.ts(38,7): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/proxy/[...path]/route.ts(3,22): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/yandex/callback/route.ts(40,20): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/yandex/callback/route.ts(41,24): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/yandex/callback/route.ts(46,33): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/yandex/callback/route.ts(137,15): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/yandex/callback/route.ts(179,44): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/yandex/callback/route.ts(203,26): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/yandex/callback/route.ts(214,17): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/yandex/callback/route.ts(224,15): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/yandex/callback/route.ts(233,15): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/yandex/callback/route.ts(242,17): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/yandex/callback/route.ts(252,15): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/yandex/debug/route.ts(4,20): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/yandex/debug/route.ts(5,23): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/yandex/disconnect/route.ts(7,13): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/yandex/login/route.ts(4,20): error TS2307: Cannot find module 'crypto' or its corresponding type declarations.
+app/api/yandex/login/route.ts(7,20): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/yandex/login/route.ts(20,33): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/yandex/login/route.ts(63,13): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/yandex/login/route.ts(71,13): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/yandex/login/route.ts(80,13): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/yandex/login/route.ts(86,17): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/yandex/mail/route.ts(48,20): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/yandex/mail/route.ts(49,24): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/yandex/mail/route.ts(149,19): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/api/yandex/mail/route.ts(156,19): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/moderator/page.tsx(116,28): error TS2694: Namespace 'NodeJS' has no exported member 'Timeout'.
+app/robots.ts(4,19): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+app/sitemap.ts(4,19): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+components/dynamic/ChartSection.tsx(6,47): error TS2307: Cannot find module '../supplier-card/ChartSection' or its corresponding type declarations.
+components/query-provider.tsx(32,8): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+components/supplier-card-optimized.tsx(135,43): error TS2559: Type 'SupplierDTO' has no properties in common with type 'CheckoDataForReliability'.
+components/supplier-card-optimized.tsx(136,18): error TS2554: Expected 2 arguments, but got 1.
+components/supplier-card-optimized.tsx(151,28): error TS2345: Argument of type 'string | null | undefined' is not assignable to parameter of type 'string | null'.
+  Type 'undefined' is not assignable to type 'string | null'.
+components/supplier-card-optimized.tsx(166,25): error TS2345: Argument of type 'SupplierDTO' is not assignable to parameter of type 'number'.
+components/supplier-card-optimized.tsx(193,9): error TS7022: 'okvedCodes' implicitly has type 'any' because it does not have a type annotation and is referenced directly or indirectly in its own initializer.
+components/supplier-card-optimized.tsx(193,30): error TS7024: Function implicitly has return type 'any' because it does not have a return type annotation and is referenced directly or indirectly in one of its return expressions.
+components/supplier-card-optimized.tsx(230,41): error TS2554: Expected 1 arguments, but got 2.
+components/supplier-card-optimized.tsx(270,40): error TS2339: Property 'map' does not exist on type 'number'.
+components/supplier-card-optimized.tsx(270,45): error TS7006: Parameter 'star' implicitly has an 'any' type.
+components/supplier-card-optimized.tsx(270,51): error TS7006: Parameter 'i' implicitly has an 'any' type.
+components/supplier-card-optimized.tsx(280,24): error TS2322: Type 'ReliabilityScoreResult' is not assignable to type 'ReactNode'.
+components/supplier-card-optimized.tsx(547,34): error TS7006: Parameter 'okved' implicitly has an 'any' type.
+components/supplier-card-optimized.tsx(547,41): error TS7006: Parameter 'index' implicitly has an 'any' type.
+components/supplier/SuppliersTableVirtualized.tsx(65,12): error TS2448: Block-scoped variable 'filteredSuppliers' used before its declaration.
+components/supplier/SuppliersTableVirtualized.tsx(65,12): error TS2454: Variable 'filteredSuppliers' is used before being assigned.
+components/supplier/SuppliersTableVirtualized.tsx(146,28): error TS2345: Argument of type 'number' is not assignable to parameter of type '{ domain: string; reason?: string | null | undefined; addedBy?: string | null | undefined; parsingRunId?: string | null | undefined; }'.
+components/supplier/SuppliersTableVirtualized.tsx(202,66): error TS2345: Argument of type 'SupplierDTO' is not assignable to parameter of type 'number'.
+lib/api.ts(23,18): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+lib/auth.ts(6,3): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+lib/auth.ts(40,13): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+proxy.ts(23,25): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+tests/e2e-cabinet-submit.spec.ts(11,19): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+tests/e2e-cabinet-submit.spec.ts(12,20): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+tests/e2e-cabinet-submit.spec.ts(13,24): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+tests/e2e-cabinet-submit.spec.ts(14,21): error TS2580: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node`.
+=== NPM RUN BUILD ===
+
+> moderator-dashboard-ui@1.0.0 build
+> next build
+
+тип Failed to load next.config.mjs, see more info here https://nextjs.org/docs/messages/next-config-error
+
+> Build error occurred
+Error: Cannot find package '@next/bundle-analyzer' imported from D:\b2b\frontend\moderator-dashboard-ui\next.config.mjs
+    at ignore-listed frames {
+  code: 'ERR_MODULE_NOT_FOUND'
+}

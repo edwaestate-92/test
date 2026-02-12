@@ -1,0 +1,101 @@
+.root {
+  width: 100%;
+  min-width: 0;
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  border-radius: 14px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--background));
+  box-shadow: 0 1px 0 hsl(var(--background)) inset;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+  overflow: hidden;
+}
+
+.frame:hover {
+  border-color: hsl(var(--foreground) / 0.35);
+}
+
+.frame:focus-within {
+  border-color: hsl(var(--ring));
+  box-shadow: 0 0 0 3px hsl(var(--ring) / 0.22);
+}
+
+.glow {
+  pointer-events: none;
+  position: absolute;
+  inset: -30% -15%;
+  background: radial-gradient(circle at 15% 30%, hsl(var(--ring) / 0.18), transparent 55%);
+  opacity: 0.55;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  gap: 8px;
+  padding: 8px 10px;
+}
+
+.searchIcon {
+  display: inline-flex;
+  color: hsl(var(--muted-foreground));
+  opacity: 0.92;
+  pointer-events: none;
+}
+
+.searchIcon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.searchInput {
+  flex: 1 1 auto;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: hsl(var(--foreground));
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.searchInput::placeholder {
+  color: hsl(var(--muted-foreground));
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+.filterButton {
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid hsl(var(--border));
+  border-radius: 9999px;
+  color: hsl(var(--muted-foreground));
+  background: hsl(var(--background));
+  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease, color 0.16s ease;
+}
+
+.filterButton:hover:not(:disabled) {
+  transform: scale(1.04);
+  color: hsl(var(--foreground));
+  border-color: hsl(var(--ring));
+  box-shadow: 0 0 0 2px hsl(var(--ring) / 0.18);
+}
+
+.filterButton:disabled {
+  opacity: 0.55;
+  cursor: default;
+}

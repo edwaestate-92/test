@@ -1,0 +1,28 @@
+# B2B Frontend — Commands After Fix Log
+# Date: 2026-02-07
+# Branch: perf/refactor-2025-07
+
+## Environment
+node --version: v22.21.1
+npm --version: 10.9.4
+
+## Lint (eslint .)
+Result: 0 errors, 17 warnings
+Exit code: 0
+
+## Type-check (tsc --noEmit)
+Result: 0 errors
+Exit code: 0
+
+## Build (next build)
+Result: Compiled successfully in 7.7s (Turbopack)
+44/44 static pages generated
+Exit code: 0
+
+## grep setInterval( in app/components/hooks
+Result: 0 matches (fully removed from prod code)
+
+## grep "optimized" in app/components/hooks
+Result: 2 matches (both are active imports, not dead code)
+- app/cabinet/messages/page.tsx: import from "@/lib/optimized-api"
+- app/moderator/page.tsx: export from "./page-optimized"

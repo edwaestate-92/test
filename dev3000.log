@@ -1,0 +1,15 @@
+
+> moderator-dashboard-ui@1.0.0 dev
+> set NODE_ENV=development&& next dev --webpack -p 3000
+
+▲ Next.js 16.1.4 (webpack)
+- Local:         http://localhost:3000
+- Network:       http://172.18.0.1:3000
+- Environments: .env.local
+- Experiments (use with caution):
+  ✓ optimizeCss
+  · optimizePackageImports
+  ✓ webpackMemoryOptimizations
+
+✓ Starting...
+[?25h
