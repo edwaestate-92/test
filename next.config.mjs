@@ -13,6 +13,8 @@ try {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Force webpack instead of Turbopack for bolt.new compatibility
+  webpack: (config) => config,
   outputFileTracingRoot: __dirname,
   // Build optimizations
   compiler: {
