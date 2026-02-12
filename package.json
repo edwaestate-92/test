@@ -3,16 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "next build --webpack",
+    "build": "next build",
     "clean": "rimraf .next",
-    "dev": "next dev --webpack",
-    "dev:webpack": "next dev --webpack",
-    "dev:safe": "cross-env NODE_OPTIONS=--max-old-space-size=2048 next dev --webpack",
+    "dev": "next dev",
+    "dev:safe": "cross-env NODE_OPTIONS=--max-old-space-size=2048 next dev",
     "lint": "eslint .",
     "start": "next start",
-    "type-check": "node ./node_modules/typescript/lib/tsc.js --noEmit",
-    "e2e:smoke": "node scripts/e2e_smoke_playwright.mjs",
-    "ui:screens": "node scripts/ui_screenshots_playwright.mjs"
+    "type-check": "node ./node_modules/typescript/lib/tsc.js --noEmit"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "1.4.0",
@@ -75,15 +72,14 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^16.1.6",
-    "@playwright/test": "^1.58.1",
-    "@types/node": "20.19.30",
-    "@types/react": "18.3.27",
+    "@next/bundle-analyzer": "^14.2.5",
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "cross-env": "^7.0.3",
-    "eslint": "^9.0.0",
-    "eslint-config-next": "^16.0.0",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.2.5",
     "rimraf": "^6.0.1",
-    "typescript": "5.9.3"
+    "typescript": "^5.3.3"
   }
 }
