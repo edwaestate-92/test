@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "build": "next build --webpack",
-    "clean": "powershell -NoProfile -Command \"$ErrorActionPreference='SilentlyContinue'; Remove-Item -LiteralPath .next -Recurse -Force -Confirm:$false\"",
-    "dev": "set NODE_ENV=development&& next dev --webpack",
-    "dev:webpack": "set NODE_ENV=development&& next dev --webpack",
-    "dev:safe": "set NODE_ENV=development&& set NODE_OPTIONS=--max-old-space-size=2048&& next dev --webpack",
+    "clean": "rimraf .next",
+    "dev": "next dev --webpack",
+    "dev:webpack": "next dev --webpack",
+    "dev:safe": "cross-env NODE_OPTIONS=--max-old-space-size=2048 next dev --webpack",
     "lint": "eslint .",
     "start": "next start",
     "type-check": "node ./node_modules/typescript/lib/tsc.js --noEmit",
@@ -70,7 +70,6 @@
     "tailwind-merge": "^2.2.0",
     "tailwindcss": "^3.4.1",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "5.9.3",
     "vaul": "^1.1.2",
     "web-vitals": "^4.2.4",
     "zod": "^3.22.4"
@@ -81,7 +80,10 @@
     "@types/node": "20.19.30",
     "@types/react": "18.3.27",
     "@types/react-dom": "^18.2.18",
+    "cross-env": "^7.0.3",
     "eslint": "^9.0.0",
-    "eslint-config-next": "^16.0.0"
+    "eslint-config-next": "^16.0.0",
+    "rimraf": "^6.0.1",
+    "typescript": "5.9.3"
   }
 }
