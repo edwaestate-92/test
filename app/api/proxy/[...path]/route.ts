@@ -8,8 +8,15 @@ import path from "path"
 const API_BASE_URL =
   process.env.BACKEND_URL || process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000"
 
-// MOCK-ONLY: всегда mock режим, не зависит от env
-const MOCK_MODE = true
+// Smart mode: если API_BASE_URL указывает на реальный бэкенд (ngrok/VPS) — проксируем,
+// если placeholder или localhost — используем mock-data.json
+const _url = API_BASE_URL.toLowerCase()
+const HAS_REAL_BACKEND =
+  _url.includes("ngrok") ||
+  _url.includes(".vercel.app") ||
+  (_url.startsWith("https://") && !_url.includes("placeholder") && !_url.includes("localhost") && !_url.includes("127.0.0.1"))
+
+const MOCK_MODE = !HAS_REAL_BACKEND
 
 async function readMock(): Promise<any> {
   const p = path.join(process.cwd(), "public", "mock-data.json")
