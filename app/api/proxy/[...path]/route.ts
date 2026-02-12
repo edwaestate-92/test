@@ -8,14 +8,8 @@ import path from "path"
 const API_BASE_URL =
   process.env.BACKEND_URL || process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000"
 
-const _MOCK_ENV =
-  process.env.NEXT_PUBLIC_MOCK_MODE ||
-  process.env.MOCK_MODE ||
-  process.env.B2B_MOCK_MODE ||
-  ""
-
-const MOCK_MODE = String(_MOCK_ENV).toLowerCase() === "1" ||
-  String(_MOCK_ENV).toLowerCase() === "true"
+// MOCK-ONLY: всегда mock режим, не зависит от env
+const MOCK_MODE = true
 
 async function readMock(): Promise<any> {
   const p = path.join(process.cwd(), "public", "mock-data.json")

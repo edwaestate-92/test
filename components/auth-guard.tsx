@@ -10,11 +10,8 @@ interface AuthGuardProps {
   allowedRoles?: Array<"admin" | "moderator" | "user">
 }
 
-const AUTH_GUARD_BYPASS = String(process.env.NEXT_PUBLIC_AUTH_BYPASS || "").toLowerCase() === "1" ||
-  String(process.env.NEXT_PUBLIC_AUTH_BYPASS || "").toLowerCase() === "true"
-
-const MOCK_MODE = String(process.env.NEXT_PUBLIC_MOCK_MODE || "").toLowerCase() === "1" ||
-  String(process.env.NEXT_PUBLIC_MOCK_MODE || "").toLowerCase() === "true"
+// MOCK-ONLY: авторизация полностью отключена
+const MOCK_MODE = true
 
 export function AuthGuard({ children, allowedRoles }: AuthGuardProps) {
   const router = useRouter()
@@ -22,12 +19,9 @@ export function AuthGuard({ children, allowedRoles }: AuthGuardProps) {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
 
   useEffect(() => {
-    if (AUTH_GUARD_BYPASS || MOCK_MODE) {
-      setIsAuthenticated(true)
-      setIsLoading(false)
-      return
-    }
-    checkAuth()
+    // Always bypass auth in mock repo
+    setIsAuthenticated(true)
+    setIsLoading(false)
   }, [])
 
   async function checkAuth() {
